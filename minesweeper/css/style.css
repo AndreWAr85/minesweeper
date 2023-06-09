@@ -1,0 +1,364 @@
+/* General Styles */
+body {
+  background: #4ab7ae;
+}
+.wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+h1 {
+  margin: 50px auto 20px auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #eef351;
+  text-shadow: 4px 4px 4px #4c580a;
+  font-size: 68px;
+  font-weight: bold;
+  text-align: center;
+  caret-color: transparent;
+}
+
+.game-info-container {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 30px;
+  width: 380px;
+  margin: 30px auto;
+}
+
+.moves-counter,
+.time-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 49%;
+  height: 96%;
+  font-size: 34px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 5px;
+  margin: auto;
+  color: #eef351;
+  text-shadow: 2px 2px #4c580a;
+}
+
+.settings-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px;
+}
+
+label {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #eef351;
+  text-shadow: 2px 2px #4c580a;
+}
+
+.settings-container select,
+.settings-container input[type="number"] {
+  text-align: center;
+  text-justify: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #eef351;
+  text-shadow: 2px 2px #4c580a;
+  padding: 5px;
+  border: 1px solid #ccd49d;
+  border-radius: 3px;
+  background: #229c9c;
+  margin-left: 10px;
+  height: 40px;
+}
+
+.settings-container select {
+  width: 130px;
+}
+
+.settings-container input[type="number"] {
+  width: 60px;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 2px solid #ccd49d;
+  border-radius: 5px;
+  margin: 15px 15px;
+  background: #229c9c;
+  color: #eef351;
+  text-shadow: 2px 2px #4c580a;
+  box-shadow: 2px 2px 3px 1px rgba(66, 68, 90, 1);
+}
+
+.new-game.active,
+button:active {
+  transition: all 0.1s;
+  box-shadow: inset 2px 2px 3px 1px rgba(66, 68, 90, 1);
+}
+
+.board-container {
+display: flex;
+position: relative;
+margin: 0 auto;
+}
+
+table {
+position: relative;
+max-width: 100vw;
+position: relative;
+margin: 50px auto;
+caret-color: transparent;
+box-shadow: 0px 0px 20px -3px rgba(66, 68, 90, 1);
+}
+
+.board-container td {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.closed {
+width: 30px;
+height: 30px;
+border: 1px solid #ccc;
+background: #ccd49d;
+text-align: center;
+font-size: 16px;
+cursor: pointer;
+caret-color: transparent;
+}
+
+.closed:active {
+background-color: #679c9e;
+}
+
+.open {
+background-color: #f1f1f1;
+}
+
+.mine {
+background: url(../assets/images/minesweeper-bomb.png) no-repeat;
+background-size: cover;
+color: #fff;
+}
+
+.num0 {
+color: #26b56e00;
+font-weight: bold;
+}
+
+.num1 {
+color: #229c9c;
+font-weight: bold;
+}
+
+.num2 {
+color: #a9a90b;
+font-weight: bold;
+}
+
+.num3 {
+color: #cf751c;
+font-weight: bold;
+}
+
+.num4 {
+color: #cf1919;
+font-weight: bold;
+}
+
+.num5 {
+color: #8000FF;
+font-weight: bold;
+}
+
+.num6 {
+color: #FF00FF;
+font-weight: bold;
+}
+
+.num7 {
+color: #0f6a04;
+font-weight: bold;
+}
+
+.num8 {
+color: #c56d09;
+font-weight: bold;
+}
+
+.marked {
+background-blend-mode: multiply;
+background-image: url(../assets/icons/danger-mines.png);
+background-position: top;
+background-repeat: no-repeat;
+background-color: #ccd49d;
+background-size: contain;
+}
+
+.result {
+position: relative;
+font-size: 36px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: bold;
+text-align: center;
+color: #eef351;
+text-shadow: 3px 3px 4px #4c580a;
+}
+
+.table-result {
+  justify-content: space-between;
+  width: 70%;
+  height: 70%;
+  text-align: center;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 2px solid #ccd49d;
+  padding: 15px 15px;
+  background: #229c9c;
+  color: #eef351;
+  text-shadow: 3px 3px 4px #4c580a;
+}
+
+.close-button {
+  width: 45px;
+  height: 45px;
+}
+
+tbody {
+  margin: auto;
+}
+
+.gray-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2a3a3aad;
+  z-index: 2;
+}
+
+.dark-theme {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+.dark-theme .settings-container select,
+.dark-theme .settings-container input[type="number"],
+.dark-theme button,
+.dark-theme .table-result {
+  background: #1f1f1f;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+  .closed {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 680px) {
+  .closed {
+    width: 20px;
+    height: 20px;
+  }
+
+  .table-result {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .closed {
+    min-width: 17px;
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    max-width: 500px;
+  }
+h1 {
+  margin: 20px auto ;
+font-size: 44px;
+}
+
+.game-info-container {
+margin: 10px auto;
+width: 70%;
+}
+
+.container-button {
+  max-height: 500px ;
+}
+
+button {
+width: 120px;
+height: 30px;
+font-size: 18px;
+margin: 20px auto 0 auto;
+}
+
+.moves-counter,
+.time-counter {
+  font-size: 24px;
+}
+
+.settings-container {
+  gap: 10px;
+  margin: 15px auto 0 auto;
+}
+
+label {
+  font-size: 22px;
+}
+
+.settings-container select,
+.settings-container input[type="number"] {
+  font-size: 16px;
+  margin-left: 10px;
+  height: 35px;
+}
+
+.settings-container select {
+  width: 110px;
+}
+
+.settings-container input[type="number"] {
+  width: 60px;
+}
+
+table {
+margin: 20px auto;
+}
+}
